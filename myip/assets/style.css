@@ -1,0 +1,255 @@
+@charset "US-ASCII";
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+audio, canvas, video {
+    display: inline-block;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+[hidden] {
+    display: none;
+}
+html {
+    font-size: 100%;
+}
+html, button, input, select, textarea {
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:active, a:hover {
+    outline: 0 none;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b, strong {
+    font-weight: bold;
+}
+blockquote {
+    margin: 1em 40px;
+}
+dfn {
+    font-style: italic;
+}
+mark {
+    background: none repeat scroll 0 0 #FFFF00;
+    color: #000000;
+}
+p, pre {
+    margin: 1em 0;
+}
+code, kbd, pre, samp {
+    font-family: monospace,serif;
+    font-size: 1em;
+}
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+q {
+    quotes: none;
+}
+q:before, q:after {
+    content: none;
+}
+small {
+    font-size: 75%;
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+dl, menu, ol, ul {
+    margin: 1em 0;
+}
+dd {
+    margin: 0 0 0 40px;
+}
+menu, ol, ul {
+    padding: 0 0 0 40px;
+}
+nav ul, nav ol {
+    list-style: none outside none;
+}
+img {
+    border: 0 none;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+figure {
+    margin: 0;
+}
+form {
+    margin: 0;
+}
+fieldset {
+    border: 1px solid #C0C0C0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    border: 0 none;
+    padding: 0;
+    white-space: normal;
+}
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+button, input {
+    line-height: normal;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+button[disabled], input[disabled] {
+    cursor: default;
+}
+input[type="checkbox"], input[type="radio"] {
+    padding: 0;
+}
+input[type="search"] {
+    -moz-box-sizing: content-box;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0 none;
+    padding: 0;
+}
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+@font-face {
+    font-family: "SSStandard";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/assets/ss-standard.eot?#iefix") format("embedded-opentype"), url("/assets/ss-standard-5415e5be7073f95028f7bf91fa4a0611.woff") format("woff"), url("/assets/ss-standard-ac0aaea78ca8e08bea6c4abedf9ca2c3.ttf") format("truetype"), url("/assets/ss-standard.svg#SSStandard") format("svg");
+}
+html {
+    font: 62.5%/20pt "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+    height: 100%;
+    letter-spacing: 1px;
+}
+body {
+    /*background: none repeat scroll 0 0 #2E3233;*/
+    background: none repeat scroll 0 0 #ffffff;
+    color: #626567;
+    font-size: 1.3em;
+    font-weight: 200;
+    height: 100%;
+    line-height: 2.25em;
+    margin: 0 auto;
+    width: 100%;
+}
+a, a:visited, a:active {
+    color: #2882A6;
+    font-weight: 400;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #7CA9B8;
+}
+.clearfix {
+    overflow: hidden;
+}
+h1 {
+    color: #2882A6;
+    font-size: 3em;
+    font-weight: 200;
+    line-height: 3.75em;
+}
+h2 {
+    color: #2882A6;
+    font-size: 1.8em;
+    font-weight: 200;
+    line-height: 3.75em;
+}
+h2 .btn {
+    margin: 0 0 0 20px;
+}
+h3 {
+    color: #414548;
+    font-size: 2.5em;
+    font-weight: 100;
+    line-height: 3.75em;
+}
+h4 {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+blockquote {
+    font-style: italic;
+}
+#content_wrapper {
+    min-width: 400px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+section h2 {
+    margin: 2em 0 0;
+}
+section p#ip_address {
+    font-size: 4em;
+    font-weight: 700;
+    margin: 0 0 3em 0;
+}
+
+section p#request_headers {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0 0 5em 0;
+}
+
+footer #footer_nav li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}

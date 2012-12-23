@@ -8,7 +8,9 @@
     Copyright (c) 2012 apitrary
 
 """
+import os.path
 import logging
+from tornado import web
 import tornado.ioloop
 import tornado.web
 import tornado.options
@@ -48,10 +50,9 @@ class MainHandler(tornado.web.RequestHandler):
             at least spit out the headers.
         """
         if 'X-Real-Ip' in self.request.headers:
-            self.write(self.request.headers['X-Real-Ip'])
+            self.render("external.html", my_ip_address=self.request.headers['X-Real-Ip'])
         else:
-            self.write(self.request.headers)
-
+            self.render("local.html", request_headers=self.request.headers)
 
 # FUNCTIONS
 #
@@ -61,9 +62,16 @@ def start_tornado_server(port=HTTP_PORT):
         Start the Tornado server
     """
     # Setup the application context
-    application = tornado.web.Application([
+    handlers = [
         (r"/", MainHandler),
-    ])
+        (r"/static/(.*)", web.StaticFileHandler, {"path": os.path.join(os.path.dirname(__file__), "assets")}),
+    ]
+
+    settings = dict(
+        template_path=os.path.join(os.path.dirname(__file__), "templates"),
+    )
+
+    application = tornado.web.Application(handlers, **settings)
 
     # Setup the HTTP server
     http_server = tornado.httpserver.HTTPServer(application)

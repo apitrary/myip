@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>apitrary MyIP - {% block title%}{% end %}</title>
+
+    <meta name="description" content="apitrary's MyIP, the IP service">
+    <meta name="author" content="apitrary">
+    <meta name="keywords" content="apitrary, myip, my IP address, ipv4, intelligent data store">
+    <meta property="og:image" content="http://apitrary.com/assets/logo.png">
+
+    <meta content="authenticity_token" name="csrf-param"/>
+    <meta content="s73hrqsUALrKTJ7s29d8e4HvJIWVH9dkeoEgeT9s7e=" name="csrf-token"/>
+    <link href="/static/style.css" media="all" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div id="content_wrapper">
+    <header>
+        {% block header %}{% end %}
+    </header>
+
+    <section>
+        {% block content %}{% end %}
+    </section>
+
+    <footer>
+        {% block footer %}{% end %}
+        <p>© 2011-2012 apitrary. All rights reserved.</p>
+    </footer>
+</div>
+</body>
+</html>
