@@ -32,6 +32,7 @@ HTTP_PORT = 8888
 # TEMPLATES PATH
 #
 #
+# TODO: Should have a function that delivers the paths depending on local host (DEV host or actual server)!
 TEMPLATES_DIR = '/usr/local/share/myip/templates'
 STYLES_DIR = '/usr/local/share/myip/assets'
 
