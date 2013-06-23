@@ -33,6 +33,7 @@ HTTP_PORT = 8888
 #
 #
 TEMPLATES_DIR = '/usr/local/share/myip/templates'
+STYLES_DIR = '/usr/local/share/myip/assets'
 
 # CLASSES
 #
@@ -69,7 +70,7 @@ def start_tornado_server(port=HTTP_PORT):
     # Setup the application context
     handlers = [
         (r"/", MainHandler),
-        (r"/static/(.*)", web.StaticFileHandler, {"path": os.path.join(os.path.dirname(__file__), "assets")}),
+        (r"/static/(.*)", web.StaticFileHandler, {"path": STYLES_DIR}),
     ]
 
     settings = dict(template_path=TEMPLATES_DIR)

@@ -31,7 +31,7 @@ def read_requirements():
 
 setup(
     name='myip',
-    version='0.1.2',
+    version='0.1.2.1',
     description='Python myip service by apitrary',
     long_description='myip is a simple web service presenting you your external IP address',
     author='Hans-Gunther Schmidt',
