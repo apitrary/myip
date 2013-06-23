@@ -10,11 +10,11 @@
 """
 import os.path
 import logging
-from tornado import web
 import tornado.ioloop
 import tornado.web
 import tornado.options
 import tornado.httpserver
+from tornado import web
 
 # LOGGING PARAMETERS
 #

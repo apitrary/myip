@@ -1,1 +1,2 @@
-tornado
+distribute==0.6.36
+tornado==3.1
