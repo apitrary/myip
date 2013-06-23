@@ -44,6 +44,11 @@ setup(
     scripts=[
         'myip/myip_runner.py'
     ],
+    data_files=[
+        ('/usr/local/share/myip', ['myip/templates/base.html']),
+        ('/usr/local/share/myip', ['myip/templates/external.html']),
+        ('/usr/local/share/myip', ['myip/templates/local.html'])
+    ],
     license='copyright by apitrary',
     install_requires=read_requirements()
 )
