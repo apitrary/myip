@@ -29,6 +29,11 @@ logger.setLevel(logging.DEBUG)
 #
 HTTP_PORT = 8888
 
+# TEMPLATES PATH
+#
+#
+TEMPLATES_DIR = '/usr/local/share/myip/templates'
+
 # CLASSES
 #
 #
@@ -67,10 +72,7 @@ def start_tornado_server(port=HTTP_PORT):
         (r"/static/(.*)", web.StaticFileHandler, {"path": os.path.join(os.path.dirname(__file__), "assets")}),
     ]
 
-    settings = dict(
-        template_path=os.path.join(os.path.dirname(__file__), "templates"),
-    )
-
+    settings = dict(template_path=TEMPLATES_DIR)
     application = tornado.web.Application(handlers, **settings)
 
     # Setup the HTTP server
