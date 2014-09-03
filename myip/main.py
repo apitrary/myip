@@ -9,13 +9,14 @@
     Copyright (c) 2012 otype
 
 """
-import os.path
 import logging
+
 import tornado.ioloop
 import tornado.web
 import tornado.options
 import tornado.httpserver
 from tornado import web
+
 
 # LOGGING PARAMETERS
 #
@@ -60,6 +61,8 @@ class MainHandler(tornado.web.RequestHandler):
         """
         if 'X-Real-Ip' in self.request.headers:
             self.render("external.html", my_ip_address=self.request.headers['X-Real-Ip'])
+        elif 'X-Forwarded-For' in self.request.headers:
+            self.render("external.html", my_ip_address=self.request.headers['X-Forwarded-For'])
         else:
             self.render("local.html", request_headers=self.request.headers)
 
