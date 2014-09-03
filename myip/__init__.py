@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
+"""Shows your IP address"""
 
-    myip
+from myip import metadata
 
-    created by hgschmidt on 03.12.12, 21:53 CET
-    
-    Copyright (c) 2012 otype
 
-"""
+__version__ = metadata.version
+__author__ = metadata.authors[0]
+__license__ = metadata.license
+__copyright__ = metadata.copyright
