@@ -1,3 +1,4 @@
+# /usr/bin/env python2.7
 # -*- coding: utf-8 -*-
 """
 
@@ -5,7 +6,7 @@
 
     created by hgschmidt on 03.12.12, 21:53 CET
     
-    Copyright (c) 2012 apitrary
+    Copyright (c) 2012 otype
 
 """
 import os.path
@@ -32,9 +33,9 @@ HTTP_PORT = 8888
 # TEMPLATES PATH
 #
 #
-# TODO: Should have a function that delivers the paths depending on local host (DEV host or actual server)!
-TEMPLATES_DIR = '/usr/local/share/myip/templates'
-STYLES_DIR = '/usr/local/share/myip/assets'
+TEMPLATES_DIR = './myip/templates'
+STYLES_DIR = './myip/assets'
+
 
 # CLASSES
 #
@@ -43,6 +44,7 @@ class MainHandler(tornado.web.RequestHandler):
     """
         Very simple handler to display the X-Real-Ip (IP address).
     """
+
     def __init__(self, application, request, **kwargs):
         """
             Store the request for later reference
@@ -60,6 +62,7 @@ class MainHandler(tornado.web.RequestHandler):
             self.render("external.html", my_ip_address=self.request.headers['X-Real-Ip'])
         else:
             self.render("local.html", request_headers=self.request.headers)
+
 
 # FUNCTIONS
 #
