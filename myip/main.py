@@ -64,7 +64,7 @@ class MainHandler(tornado.web.RequestHandler):
         elif 'X-Forwarded-For' in self.request.headers:
             self.render("external.html", my_ip_address=self.request.headers['X-Forwarded-For'])
         else:
-            self.render("local.html", request_headers=self.request.headers)
+            self.render("local.html", request_headers=self.request.headers['X-Forwarded-For'])
 
 
 # FUNCTIONS
