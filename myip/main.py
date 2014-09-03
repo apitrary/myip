@@ -62,7 +62,11 @@ class MainHandler(tornado.web.RequestHandler):
         if 'X-Real-Ip' in self.request.headers.keys():
             self.render("external.html", my_ip_address=self.request.headers['X-Real-Ip'])
         elif 'X-Forwarded-For' in self.request.headers.keys():
-            self.render("external.html", my_ip_address=self.request.headers['X-Forwarded-For'])
+            ips = self.request.headers['X-Forwarded-For'].split(',')
+            if len(ips) > 0:
+                self.render("external.html", my_ip_address=ips[0])
+            else:
+                self.render("external.html", my_ip_address=self.request.headers['X-Forwarded-For'])
         else:
             self.render("local.html", request_headers=self.request.headers)
 
