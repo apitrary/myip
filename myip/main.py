@@ -59,12 +59,12 @@ class MainHandler(tornado.web.RequestHandler):
             Print out the 'X-Real-Ip' header variable. If not available
             at least spit out the headers.
         """
-        if 'X-Real-Ip' in self.request.headers:
+        if 'X-Real-Ip' in self.request.headers.keys():
             self.render("external.html", my_ip_address=self.request.headers['X-Real-Ip'])
-        elif 'X-Forwarded-For' in self.request.headers:
+        elif 'X-Forwarded-For' in self.request.headers.keys():
             self.render("external.html", my_ip_address=self.request.headers['X-Forwarded-For'])
         else:
-            self.render("local.html", request_headers=self.request.headers['X-Forwarded-For'])
+            self.render("local.html", request_headers=self.request.headers)
 
 
 # FUNCTIONS
