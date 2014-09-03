@@ -28,7 +28,7 @@ logger.setLevel(logging.DEBUG)
 # PORT
 #
 #
-HTTP_PORT = 8888
+HTTP_PORT = 65410
 
 # TEMPLATES PATH
 #
